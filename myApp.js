@@ -9,13 +9,14 @@ var app = express();
 
 
 /** 1) Meet the node console. */
-console.log("Hello World");
+console.log('Hello World');
 
 /** 2) A first working Express Server */
-app.get('/',function(req,res){res.send('Hello Express');});
+// app.get('/',function(req,res){res.send('Hello Express');});
+
 
 /** 3) Serve an HTML file */
-
+app.get('/',function(req,res){res.sendFile(__dirname + '/views/index.html');});
 
 /** 4) Serve static assets  */
 
