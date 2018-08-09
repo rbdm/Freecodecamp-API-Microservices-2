@@ -14,7 +14,7 @@ console.log('Hello World');
 
 /** 2) A first working Express Server */
 // app.get('/',function(req,res){res.send('Hello Express');});
-
+//commented out due to challenge #3
 
 /** 3) Serve an HTML file */
 app.get('/',function(req,res){res.sendFile(__dirname + '/views/index.html');});
@@ -26,7 +26,7 @@ app.use('/',express.static(__dirname + '/public'));
 
 /** 5) serve JSON on a specific route */
 //app.get('/json',function(req,res){res.json({"message": "Hello json"});});
-
+//commented out due to challenge #6
 
 /** 6) Use the .env file to configure the app */
 process.env.MESSAGE_STYLE="uppercase";
