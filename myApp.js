@@ -3,7 +3,13 @@ var express = require('express');
 var app = express();
 
 // --> 7)  Mount the Logger middleware here
-
+app.use('/', (req,res,next) => {
+  let method=req.method;
+  let path=req.path;
+  let ip=req.ip;
+  console.log(method + ' ' + path + ' - ' + ip);
+  next();
+});
 
 // --> 11)  Mount the body-parser middleware  here
 
@@ -35,7 +41,7 @@ app.get('/json', (req,res) => {let message="Hello json"; (process.env.MESSAGE_ST
 
 /** 7) Root-level Middleware - A logger */
 //  place it before all the routes !
-
+// moved to row 6
 
 /** 8) Chaining middleware. A Time server */
 
