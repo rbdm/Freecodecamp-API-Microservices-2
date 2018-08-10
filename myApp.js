@@ -44,7 +44,13 @@ app.get('/json', (req,res) => {let message="Hello json"; (process.env.MESSAGE_ST
 // solution#7 moved to row 6
 
 /** 8) Chaining middleware. A Time server */
-
+app.get('/now', (req,res,next) => {
+  req.now = (req,res) => {
+    req.time = new Date().toString();
+  };
+  res.json({"time":req.time});
+  next();
+});
 
 /** 9)  Get input from client - Route parameters */
 
