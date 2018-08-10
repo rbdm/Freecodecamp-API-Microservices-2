@@ -41,7 +41,7 @@ app.get('/json', (req,res) => {let message="Hello json"; (process.env.MESSAGE_ST
 
 /** 7) Root-level Middleware - A logger */
 //  place it before all the routes !
-
+// moved to row 6
 
 /** 8) Chaining middleware. A Time server */
 
