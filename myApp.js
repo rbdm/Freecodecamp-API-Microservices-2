@@ -25,11 +25,13 @@ console.log('Hello World');
 
 
 /** 3) Serve an HTML file */
-app.get('/',function(req,res){res.sendFile(__dirname + '/views/index.html');});
+app.get('/', (req,res) => {
+  res.sendFile(__dirname + '/views/index.html');
+});
 
 
 /** 4) Serve static assets  */
-app.use('/',express.static(__dirname + '/public'));
+app.use('/', express.static(__dirname + '/public'));
 
 
 /** 5) serve JSON on a specific route */
@@ -63,6 +65,10 @@ app.get('/now', (req,res,next) => {
 
 
 /** 9)  Get input from client - Route parameters */
+app.get('/:word/echo', (req,res) => {
+  let word = req.params.word;
+  res.json({"echo":word});
+});
 
 
 /** 10) Get input from client - Query parameters */
