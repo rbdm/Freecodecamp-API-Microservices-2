@@ -1,5 +1,6 @@
 
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
 
 // --> 7)  Mount the Logger middleware here
@@ -13,6 +14,11 @@ app.use('/', (req,res,next) => {
 
 
 // --> 11)  Mount the body-parser middleware  here
+let parsedUrl=bodyParser.urlencoded({extended:false});
+
+app.use(parsedUrl, (req,res,next) => {
+  next();
+});
 
 
 /** 1) Meet the node console. */
@@ -35,7 +41,8 @@ app.use('/', express.static(__dirname + '/public'));
 
 
 /** 5) serve JSON on a specific route */
-// app.get('/json',function(req,res){res.json({"message": "Hello json"});});
+// app.get('/json', (req,res) => {
+//  res.json({"message": "Hello json"});});
 // solution#5 (above) commented out due to challenge #6
 
 
@@ -78,15 +85,15 @@ app.get('/name', (req,res) => {
   let lastname = req.query.last;
   let name = firstname + ' ' + lastname;
   res.json({"name":name});
-});        
-        
-  
+});
+
+
 /** 11) Get ready for POST Requests - the `body-parser` */
 // place it before all the routes !
+// solution#11 moved to row 16
 
 
 /** 12) Get data form POST  */
-
 
 
 // This would be part of the basic setup of an Express app
@@ -95,4 +102,4 @@ app.get('/name', (req,res) => {
 
 //---------- DO NOT EDIT BELOW THIS LINE --------------------
 
- module.exports = app;
+module.exports = app;
