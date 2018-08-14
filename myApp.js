@@ -26,7 +26,9 @@ console.log('Hello World');
 
 
 /** 2) A first working Express Server */
-// app.get('/',function(req,res){res.send('Hello Express');});
+// app.get('/', function(req,res) {
+//   res.send('Hello Express');
+// });
 // solution#2 (above) commented out due to challenge #3
 
 
@@ -37,17 +39,19 @@ app.get('/', (req,res) => {
 
 
 /** 4) Serve static assets  */
-app.use('/', express.static(__dirname + '/public'));
+app.use('/',express.static(__dirname + '/public'));
 
 
 /** 5) serve JSON on a specific route */
 // app.get('/json', (req,res) => {
-//  res.json({"message": "Hello json"});});
+//  res.json({"message": "Hello json"});
+// });
 // solution#5 (above) commented out due to challenge #6
 
 
 /** 6) Use the .env file to configure the app */
-process.env.MESSAGE_STYLE="uppercase";
+//process.env.MESSAGE_STYLE = "uppercase";
+//moved to <key>.env
 
 app.get('/json', (req,res) => {
   let message = "Hello json"; 

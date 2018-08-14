@@ -4,7 +4,7 @@
   "description": "freecodecamp API and microservices challenge chapter 2",
   "keywords": [ "freecodecamp", "API", "microservices","npm","express","node.js" ],
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "v1",
 	"dependencies": {
 		"express": "^4.14.0",
 		"body-parser": "^1.15.2",
