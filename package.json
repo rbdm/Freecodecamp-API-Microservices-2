@@ -1,21 +1,28 @@
 {
-	"author": "rbdm",
-	"name": "fcc-learn-node-with-express",
+  "author": "rbdm",
+  "name": "fcc-learn-node-with-express",
   "description": "freecodecamp API and microservices challenge chapter 2",
-  "keywords": [ "freecodecamp", "API", "microservices","npm","express","node.js" ],
+  "keywords": [
+    "freecodecamp",
+    "API",
+    "microservices",
+    "npm",
+    "express",
+    "node.js"
+  ],
   "license": "MIT",
   "version": "v1",
-	"dependencies": {
-		"express": "^4.14.0",
-		"body-parser": "^1.15.2",
-		"cookie-parser": "^1.4.3",
-		"fcc-express-bground": "https://github.com/Em-Ant/fcc-express-bground-pkg.git"
-	},
-	"main": "server.js",
-	"scripts": {
-		"start": "node server.js"
-	},
-	"engines": {
-		"node": "4.4.5"
-	}
+  "dependencies": {
+    "express": "^4.16.3",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "fcc-express-bground": "https://github.com/Em-Ant/fcc-express-bground-pkg.git"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "4.4.5"
+  }
 }
